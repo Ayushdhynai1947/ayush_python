@@ -1,3 +1,6 @@
+# priority queue using list 
+
+
 class  PrirorityQueue():
     def __init__(self) -> None:
         self.list =[]
