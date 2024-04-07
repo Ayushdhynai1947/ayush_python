@@ -1,13 +1,13 @@
-#write a program to clculate sum of first N natural number 
-def sumn(n):
-    
+#write a program to calculate sum of first N natural number 
+def sumn(n):   
     if n ==1:
         return 1
     
     return n +sumn(n-1)
-
 t = sumn(5)
 print(t)
+##########################################
+
 
 
 # write a recusive function to calulate sum of N odd number
@@ -49,4 +49,3 @@ def sumofsquare(n):
     return n*n +sumofsquare(n-1)
 
 print ("sum is ",sumofsquare(10))
-    

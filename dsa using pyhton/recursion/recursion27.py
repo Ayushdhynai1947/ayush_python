@@ -43,6 +43,7 @@ t =printreverse(6)
 print(t)
 
 # even  natural  number  using recursion 
+
 def printodd(n):
     if n >0:
         printodd(n-1)
