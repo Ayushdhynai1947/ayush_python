@@ -1,9 +1,10 @@
 class node:
-    def __init__(self,item = None ,data = None,right = None) -> None:
-        self.left = None
-        self.data = None
-        self.right = None
-
+    def __init__(self, item = None ,right = None,left=None) -> None:
+        self.item = item 
+        self.left = left
+        self.right = right
+        
+    
 class BST:
     def __init__(self) -> None:
         self.root = None
@@ -11,19 +12,35 @@ class BST:
     def insert(self,data):
         self.root = self.rinsert(self.root ,data)
         
-    def rinsert(self,root,data):
+    def rinsert(self,root ,data):
         if root is None:
             return node(data)
-        if data <root.item:
-            root.left = self.rinsert(root.left ,data)
-        elif data >root.item :
+        if data<root.item:
+            root.left = self.rinsert(root.left,data)
+            
+        elif data>root.item:
             root.right = self.rinsert(root.right,data)
-        return root
-
-
-
-
-
-
-
-
+        return root       
+    def search(self,data):
+        return self.rsearch(self.root,data)
+    def rsearch(self,root ,data):
+        if root is None or root.item ==data:
+            return root
+        if data<root.item:
+            return self.rsearch(root.left ,data)
+        else:
+            return self.rsearch(root.right,data)
+        
+    def inorder(self):
+        result=[]
+        self.riorder(self.root,result)
+        return result
+    
+    def rinorder(self,root,result):
+        if root:
+            self.rinorder(root.left,result)
+            result.append(root.item)
+            self.rinorder(root.right,result)
+        
+            
+            
