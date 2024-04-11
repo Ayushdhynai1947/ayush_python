@@ -1,13 +1,13 @@
-def selectionsort(list1):
-    n= len(list1)
-    for i in range(n):
-        min_index =i
-        for j in range(i+1,n):
-            if list1[j]<list1[min_index]:
-                min_index  =j
-        list1[i],list1[min_index] = list1[min_index],list1[i]    
-                
-l = [21,31,23,43,12,41,14]
-selectionsort(l)
-print(l)
-
+def quick_short(list1):
+    if len(list1)<=1:
+        return list1
+    else:
+        pivot =list1[0]
+        lesser = [x for x in list1[1:] if x<=pivot]
+        greater  = [x for x in list1[1:] if x>pivot]
+        return quick_short(lesser) +[pivot]+ quick_short(greater)
+    
+    
+mylist =[23,21,12,43,54,14,51,35,34,91,19]
+quick_short(mylist)
+print(mylist)
