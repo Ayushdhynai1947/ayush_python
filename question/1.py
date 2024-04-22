@@ -72,4 +72,27 @@ def fact(n):
 
 f = lambda n: 1 if n ==0 or n==1 else n*f(n-1)
 
+## namespace  is mapping if name with the object 
 
+
+# local scope in pyhton 
+class person():
+    def __init__(self, age):
+        self.age = age 
+        
+
+fab  = person(age= 45)
+print(fab.age)
+print(id(fab))
+print(id(fab.age))
+
+fab.age = 34
+print(id(fab))
+##############################3
+# immutable string,touple,bytes
+
+c = list(zip(['h','e','l','l','o'],[1,2,3,4,5]))
+print(c)
+
+d = dict(zip('hello',range(5)))
+print(d)
