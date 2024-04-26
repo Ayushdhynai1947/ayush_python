@@ -96,3 +96,31 @@ print(c)
 
 d = dict(zip('hello',range(5)))
 print(d)
+
+
+
+
+
+######################enumeratoe in pyhton #################
+surnames = ['ayush','dhyani','kiran']
+for position,surname in enumerate(surnames):
+    print(position,surname)
+    
+    
+    
+    
+pople = ['ayush ','dhyani ','rahul ', 'siya']
+ages =[23,45,67,87]
+nationality = ['poaland','india','soutafrica','antarica']
+for perosn ,age,nationalityes in zip(pople,ages,nationality):
+    print(perosn,age,nationalityes)
+    
+    
+    
+############another method################ 
+pople = ['ayush ','dhyani ','rahul ', 'siya']
+ages =[23,45,67,87]
+nationality = ['poaland','india','soutafrica','antarica']
+for data in zip(pople,ages,nationality):
+    perosn,age,nationalityes=data
+    print(perosn,age,nationalityes)
