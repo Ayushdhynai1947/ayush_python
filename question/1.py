@@ -124,3 +124,118 @@ nationality = ['poaland','india','soutafrica','antarica']
 for data in zip(pople,ages,nationality):
     perosn,age,nationalityes=data
     print(perosn,age,nationalityes)
+    
+    
+##########################
+
+
+n = 45
+remainer =[]
+while n>0:
+    n,remainer =divmod(n,2)
+    remainer.insert(0,remainer)
+    
+    
+##################prime genartor   #######################
+primes =[]
+upto = 100
+for n in range(2,upto+1):
+    flag = True
+    for number in range(2,n):
+        if n%number ==0:
+            flag = False
+            break
+        
+    if flag:
+        primes.append(n)
+print(primes)
+
+
+
+for n in range(2,5):
+    print(n)
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+##########psotional argument########################
+
+def miminum(*n):
+    print(type(n)) 
+    
+    if n:
+        mn=n[0]
+        for vaalue in n[1:]:
+            if vaalue<mn:
+                mn= vaalue
+        print(mn)  
+
+miminum(1,2,3,-4)
+
+
+
+##########variablel keyword argumnet 
+def fun(**kwargs):
+    print(type(kwargs)) 
+    
+    print(kwargs)
+    
+fun(a=2,b =5,c = 7)
+
+
+
+
+################lamda function ###############
+def is_multiple(n):
+    return  not n %5
+
+def get_multiple(n):
+    return list(filter(is_multiple,range(n)))
+
+
+p = get_multiple(10)
+print(p)
+
+
+######################zip function ############
+
+a =[3,4,5,6,6]
+b = [3,45,5,6,7]
+_maxz = map(lambda n:max(*n),zip(a,b))
+print(_maxz)
+
+
+
+a =[3,4,5,6,6]
+p = list(filter(lambda x:x ,a))
+print(p)
+
+
+
+
+
+
+
+
+
+
+#############fibonachi second#########
+def fibonacci(N):
+    yield 0
+    if N==0:
+        return
+    
+    a =0
+    b =1
+    while b<=N:
+        yield b
+        a,b = b,a+b
+        
+print(list(fibonacci(5)))
