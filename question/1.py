@@ -239,3 +239,36 @@ def fibonacci(N):
         a,b = b,a+b
         
 print(list(fibonacci(5)))
+
+###############################
+# Prompting the user to input their name, subject, and gender
+name = input("Enter your name: ")
+subject = input("Enter your subject: ")
+gender = input("Enter your gender: ")
+
+# Checking if the gender is female and printing the details accordingly
+if gender.lower() == "female":
+    print("Name:", name)
+    print("Subject:", subject)
+    print("Gender:", gender)
+else:
+    print("You are not a female candidate.")
+    
+    
+    
+
+
+#######################################
+
+femlae_candiditate = []
+
+for i in range (N):
+    print(f"enter {i+1}:")
+    name = input("enter  your name :")
+    subject = input("enter your subject")
+    gender = input("Enter your gender")
+    
+    
+    
+    if gender.lower =="female ":
+        femlae_candiditate.append({"Name":name ,"Subject":subject,"Gender":gender})
