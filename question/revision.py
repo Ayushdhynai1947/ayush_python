@@ -230,15 +230,46 @@ class IPHONE:
     def getOSVersion(self,os):
         os.getNotification()
     
-    # def call(self,os):
-    #     os.call()
-
-    
-    
-        
+    def call(self,os):
+        os.call()
 
 a1 =OS2()
 # a1.getNotification()
 
 a2 = IPHONE()
 a2.getOSVersion(a1)
+a2.call(a1)
+
+#####################################################
+
+
+
+###################################################
+
+
+##########overloding ####################
+class  Calculator:
+    
+    # def add(self,n1 ,n2):
+    #     print(n1+n2)
+        
+    def add(self,n1,n2=0,n3=0):
+        print(n1+n2+n3)
+        
+        
+    def add1 (self,n1,n2,n3):
+        s = 0
+        
+        if n3!=None:
+            s = n1+n2+n3
+        elif n2!=None:
+            s =n1+n2
+        else:
+            s = n1
+        
+        return s
+            
+        
+        
+c1 = Calculator()
+c1.add(4,5)
