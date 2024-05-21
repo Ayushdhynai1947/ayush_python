@@ -273,3 +273,40 @@ class  Calculator:
         
 c1 = Calculator()
 c1.add(4,5)
+
+
+
+
+
+
+##################operator over loading ###################################
+
+
+class student:
+    
+    
+    def __init__(self, m1 ,m2) -> None:
+        self.m1 = m1
+        self.m2 = m2
+        
+    # def add(self):
+    #     print("addition of two number is ")
+    #     return self.m1+self.m2
+    
+    def __add__(self,other):
+        total1 = self.m1 +other.m1
+        total2 = self.m2 +other.m2
+        k = student(total1,total2)
+        return k
+    
+    def __str__(self) -> str:
+        return str(self.m1) +":" + str(self.m2)
+    
+
+k = student(8,4)
+j = student(5,8)
+s = k + j
+print(s)
+
+
+    
